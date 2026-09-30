@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resume Job Matcher</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header>
+<div>
+<b>📄 Resume Job Matcher</b>
+<small>NLP / Machine Learning • Task-05</small>
+</div>
+
+<span id="status">Checking API...</span>
+</header>
+
+<main>
+
+<section class="hero">
+<p class="tag">FULL-STACK NLP APPLICATION</p>
+<h1>Resume vs Job Description</h1>
+<p>
+Upload your resume and paste a job description to calculate
+a text-similarity match score and identify relevant keywords.
+</p>
+</section>
+
+<section class="card">
+
+<h2>Match Your Resume</h2>
+
+<form id="form">
+
+<label>Resume PDF</label>
+
+<div class="upload">
+<input
+    id="resume"
+    type="file"
+    accept=".pdf"
+    required
+>
+<p>Select your PDF resume</p>
+</div>
+
+<label>Job Description</label>
+
+<textarea
+    id="job"
+    rows="10"
+    placeholder="Paste the complete job description here..."
+    required
+></textarea>
+
+<button id="btn">
+Calculate Match
+</button>
+
+</form>
+
+<div id="message"></div>
+
+</section>
+
+
+<section class="result-grid">
+
+<div class="card score-card">
+
+<span>Match Score</span>
+
+<strong id="score">
+0%
+</strong>
+
+<p>
+Based on TF-IDF cosine similarity
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>Matched Keywords</h2>
+
+<div id="matched" class="tags">
+No result yet.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Missing Keywords</h2>
+
+<div id="missing" class="tags">
+No result yet.
+</div>
+
+</div>
+
+</section>
+
+
+<section class="card">
+
+<div class="top">
+
+<div>
+<h2>Match History</h2>
+<small>Previous resume analyses stored in SQLite</small>
+</div>
+
+<button id="clear" class="danger">
+Clear History
+</button>
+
+</div>
+
+<div class="table">
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Resume</th>
+<th>Score</th>
+<th>Matched</th>
+<th>Missing</th>
+<th>Date</th>
+</tr>
+</thead>
+
+<tbody id="history"></tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2>How It Works</h2>
+
+<div class="steps">
+
+<div>
+<b>1</b>
+<span>Upload Resume</span>
+</div>
+
+<div>
+<b>2</b>
+<span>Extract PDF Text</span>
+</div>
+
+<div>
+<b>3</b>
+<span>TF-IDF Analysis</span>
+</div>
+
+<div>
+<b>4</b>
+<span>Similarity Score</span>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+Task-05 • Resume Job Matching • TF-IDF + Cosine Similarity
+</footer>
+
+<script src="/script.js"></script>
+
+</body>
+</html>

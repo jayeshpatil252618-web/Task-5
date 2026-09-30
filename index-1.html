@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cat vs Dog Classifier</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+<div>
+<b>🐱 Cat vs Dog Classifier</b>
+<small>Machine Learning • Task-03</small>
+</div>
+<span id="status">Checking API...</span>
+</header>
+
+<main>
+
+<section class="hero">
+<p class="tag">FULL-STACK MACHINE LEARNING</p>
+<h1>Cat or Dog?</h1>
+<p>
+Upload an image and the trained SVM model will classify it
+as a Cat or Dog.
+</p>
+</section>
+
+<section class="card">
+
+<h2>Upload Image</h2>
+
+<form id="form">
+
+<div class="drop">
+<input id="image" type="file" accept=".jpg,.jpeg,.png,.bmp" required>
+<p>Choose a cat or dog image</p>
+</div>
+
+<button id="btn">Classify Image</button>
+
+</form>
+
+<div id="preview"></div>
+<div id="message"></div>
+
+<div class="result">
+<span>Prediction</span>
+<strong id="prediction">-</strong>
+<small id="confidence"></small>
+</div>
+
+</section>
+
+<section class="card info">
+
+<h2>How it works</h2>
+
+<div class="steps">
+<div><b>1</b><span>Upload Image</span></div>
+<div><b>2</b><span>Extract HOG Features</span></div>
+<div><b>3</b><span>SVM Classification</span></div>
+<div><b>4</b><span>Show Prediction</span></div>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+Task-03 • Cat vs Dog Image Classification • SVM
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>

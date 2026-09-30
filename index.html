@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Customer Segmentation</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <b>👥 Customer Segmentation</b>
+    <small>Machine Learning • Task-02</small>
+  </div>
+  <span id="status">Checking API...</span>
+</header>
+
+<main>
+
+<section class="hero">
+  <p class="tag">FULL-STACK MACHINE LEARNING</p>
+  <h1>Customer Segmentation</h1>
+  <p>
+    Use K-Means clustering to identify customer groups
+    based on annual income and spending score.
+  </p>
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h2>Customer Details</h2>
+
+<form id="form">
+
+<label>Annual Income (k$)</label>
+<input id="income" type="number" min="0" step="0.1"
+       placeholder="Example: 60" required>
+
+<label>Spending Score (1-100)</label>
+<input id="score" type="number" min="0" max="100" step="0.1"
+       placeholder="Example: 70" required>
+
+<button id="btn">Find Customer Cluster</button>
+
+</form>
+
+<p id="message"></p>
+</div>
+
+<div class="card">
+<h2>Cluster Result</h2>
+
+<div class="cluster">
+  <span>Assigned Cluster</span>
+  <strong id="cluster">-</strong>
+</div>
+
+<div class="details">
+<div>
+  <span>Annual Income</span>
+  <b id="ri">-</b>
+</div>
+<div>
+  <span>Spending Score</span>
+  <b id="rs">-</b>
+</div>
+<div>
+  <span>Algorithm</span>
+  <b>K-Means</b>
+</div>
+<div>
+  <span>Clusters</span>
+  <b>5</b>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+<div class="top">
+  <div>
+    <h2>Prediction History</h2>
+    <small>Stored in SQLite</small>
+  </div>
+  <button class="danger" id="clear">Clear History</button>
+</div>
+
+<div class="table">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Income</th>
+<th>Spending Score</th>
+<th>Cluster</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody id="history"></tbody>
+</table>
+</div>
+</section>
+
+</main>
+
+<footer>
+Task-02 • Customer Segmentation • K-Means Clustering
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>

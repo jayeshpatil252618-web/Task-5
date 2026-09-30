@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hand Gesture Recognition</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header>
+<div>
+<b>✋ Hand Gesture Recognition</b>
+<small>Machine Learning • Task-04</small>
+</div>
+<span id="status">Checking API...</span>
+</header>
+
+<main>
+
+<section class="hero">
+<p class="tag">FULL-STACK MACHINE LEARNING</p>
+<h1>Recognize Hand Gestures</h1>
+<p>
+Upload a hand gesture image and the trained SVM model
+will identify the gesture class.
+</p>
+</section>
+
+<section class="card">
+
+<h2>Upload Gesture Image</h2>
+
+<form id="form">
+
+<div class="drop">
+<input id="image" type="file"
+       accept=".jpg,.jpeg,.png,.bmp" required>
+<p>Select a clear hand gesture image</p>
+</div>
+
+<button id="btn">Recognize Gesture</button>
+
+</form>
+
+<div id="preview"></div>
+<div id="message"></div>
+
+<div class="result">
+<span>Detected Gesture</span>
+<strong id="prediction">-</strong>
+<small id="confidence"></small>
+</div>
+
+</section>
+
+<section class="card">
+
+<div class="top">
+<div>
+<h2>Recognition History</h2>
+<small>Previous predictions stored in SQLite</small>
+</div>
+
+<button id="clear" class="danger">
+Clear History
+</button>
+</div>
+
+<div class="table">
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Gesture</th>
+<th>Confidence</th>
+<th>Image</th>
+<th>Date</th>
+</tr>
+</thead>
+
+<tbody id="history"></tbody>
+
+</table>
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>How It Works</h2>
+
+<div class="steps">
+<div><b>1</b><span>Upload Image</span></div>
+<div><b>2</b><span>Extract Features</span></div>
+<div><b>3</b><span>SVM Classification</span></div>
+<div><b>4</b><span>Show Gesture</span></div>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+Task-04 • Hand Gesture Recognition • SVM
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>
